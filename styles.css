@@ -33,10 +33,13 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #0056b3; /* Effet survol avec fond clair */
 }
 
 /* Style de l'introduction */
@@ -44,7 +47,14 @@ nav ul li a:hover {
     background-color: #0056b3; /* Bleu foncé */
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
+}
+
+#accueil .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
 #accueil h1 {
@@ -54,6 +64,8 @@ nav ul li a:hover {
 
 #accueil p {
     font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Style des sections */
@@ -71,8 +83,9 @@ section {
 
 .project-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .project-card {
@@ -80,14 +93,15 @@ section {
     color: white;
     padding: 1.5rem;
     width: 250px;
-    margin: 1rem;
     border-radius: 8px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
     transform: translateY(-10px);
+    background-color: #0056b3;
 }
 
 .project-card h3 {
@@ -99,35 +113,11 @@ section {
     font-size: 1rem;
 }
 
-/* Style du CV */
-#cv h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-#cv ul {
-    list-style-type: none;
-    font-size: 1.2rem;
-}
-
-#cv ul li {
-    margin: 0.5rem 0;
-}
-
-#cv a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-#cv a:hover {
-    text-decoration: underline;
-}
-
 /* Style de la section Contact */
 #contact {
     background-color: #f0f0f0;
     text-align: center;
+    padding: 2rem;
 }
 
 /* Style du pied de page */
