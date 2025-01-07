@@ -14,7 +14,7 @@ body {
 
 /* Style de l'en-tête et navigation */
 header {
-    background-color: #3567d3; /* Bleu principal */
+    background-color: #4f74c2; /* Bleu principal */
     color: white;
     padding: 1rem;
 }
@@ -39,7 +39,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #7295df; /* Effet survol avec fond clair */
+    background-color: #8aa6e1; /* Effet survol avec fond clair */
 }
 
 /* Style de l'introduction */
@@ -122,7 +122,7 @@ section {
 
 /* Style du pied de page */
 footer {
-    background-color: #7295df;
+    background-color: #4f74c2;
     color: white;
     text-align: center;
     padding: 1rem;
