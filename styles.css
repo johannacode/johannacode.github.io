@@ -1,54 +1,49 @@
-/* Styles globaux */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    background-color: #3567d3;
+    color: #fff;
+    padding: 20px 10px;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
+header nav a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-
-/* Effet de survol */
-nav ul li a:hover {
-    background-color: #555;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 
-/* Style de la page principale */
-main {
-    padding: 20px;
-    text-align: center;
+header nav a:hover {
+    background-color: #4a81e0;
 }
 
-/* Pied de page */
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #3567d3;
+}
+
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
     text-align: center;
-    position: fixed;
-    width: 100%;
+    padding: 10px;
+    background-color: #3567d3;
+    color: #fff;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
