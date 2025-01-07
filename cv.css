@@ -1,0 +1,26 @@
+.cv {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.cv-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cv-section h2 {
+    margin-top: 0;
+}
+
+.cv-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cv-section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
