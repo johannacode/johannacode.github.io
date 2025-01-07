@@ -1,11 +1,16 @@
+/* Global styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Header styles */
 header {
     background-color: #3567d3;
     color: #fff;
@@ -17,6 +22,9 @@ header nav {
     display: flex;
     justify-content: center;
     gap: 20px;
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
 }
 
 header nav a {
@@ -30,20 +38,12 @@ header nav a:hover {
     background-color: #4a81e0;
 }
 
-main {
-    padding: 20px;
-}
-
-h1, h2 {
-    color: #3567d3;
-}
-
+/* Footer styles */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #3567d3;
     color: #fff;
-    position: relative;
-    bottom: 0;
+    margin-top: auto; /* Place le footer en bas de la page */
     width: 100%;
 }
