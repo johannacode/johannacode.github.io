@@ -4,51 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur mon portfolio !</h1>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <h2>À propos de moi</h2>
-        <p>Je suis Johanna, une passionnée de cybersécurité et de développement web.</p>
-        <h3>Projets récents :</h3>
+    <section id="accueil">
+        <div class="intro">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Je suis un passionné de cybersécurité, développeur Python et créateur de projets innovants.</p>
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Projet 1</h3>
+                <p>Description du projet...</p>
+            </div>
+            <div class="project-card">
+                <h3>Projet 2</h3>
+                <p>Description du projet...</p>
+            </div>
+            <!-- Ajoute d'autres projets ici -->
+        </div>
+    </section>
+
+    <section id="cv">
+        <h2>Mon CV</h2>
+        <p>Télécharge mon CV <a href="cv.pdf" target="_blank">ici</a>.</p>
+        <p>Quelques points forts :</p>
         <ul>
-            <li>Générateur de mots de passe sécurisé</li>
-            <li>Analyse de mots de passe compromis via une API</li>
+            <li>Compétences en développement Python</li>
+            <li>Formation en cybersécurité</li>
+            <li>Expérience de projets réels</li>
         </ul>
-    </main>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Tu peux me contacter à <a href="mailto:contact@monemail.com">contact@monemail.com</a>.</p>
+    </section>
 
     <footer>
-        <p>Contactez-moi : johanna@example.com</p>
+        <p>&copy; 2025 Mon Nom. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
