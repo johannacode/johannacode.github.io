@@ -1,6 +1,6 @@
 form {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 50px auto; /* Ajoute de l'espace entre le formulaire et les bords */
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
