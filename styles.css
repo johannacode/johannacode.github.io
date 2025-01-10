@@ -76,7 +76,7 @@ nav ul li a:hover {
   background: linear-gradient(135deg, #f9f9f9, #eaf2ff);
     background-color: #f9f9f9; 
     gap: 2rem;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
 }
 
 
