@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Python - Générateur de mots de passe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Code Python : Générateur de mots de passe</h1>
+        <nav>
+            <a href="index.html">Retour à l'accueil</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Description</h2>
+            <p>Ce projet consiste en un programme Python capable de générer des mots de passe sécurisés. L'objectif est de garantir un niveau élevé de protection pour vos comptes en ligne.</p>
+        </section>
+
+        <section>
+            <h2>Fonctionnalités</h2>
+            <ul>
+                <li>Génération de mots de passe aléatoires</li>
+                <li>Personnalisation de la longueur et des caractères</li>
+                <li>Validation de la robustesse du mot de passe</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Code Source</h2>
+            
+            <pre>
+              <code>
+              <span class="keyword">def</span> <span class="function">generate_password</span>(<span class="variable">length=12</span>):
+              <span class="variable">characters</span> = string.ascii_letters + string.digits + string.punctuation
+              <span class="keyword">return</span> ''.join(random.choice(<span class="variable">characters</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="variable">length</span>))
+              </code>
+          </pre>
+
+        </section>
+      
+<pre>
+<code>
+import re  
+import random
+import string
+import hashlib
+import urllib.request
+
+
+def verifier_mot_de_passe(mot_de_passe):
+    """Vérifie si un mot de passe est fort.
+    
+    Cette fonction analyse le mot de passe pour vérifier s'il répond aux critères de sécurité :
+    - Longueur minimale de 8 caractères.
+    - Contient au moins une majuscule, une minuscule, un chiffre, et un caractère spécial.
+    
+    Args:
+    mot_de_passe (str): Le mot de passe à vérifier.
+
+    Returns:
+    str: Un message indiquant si le mot de passe est fort ou quels critères il ne respecte pas.
+    """
+    # Vérification de la longueur du mot de passe
+    if len(mot_de_passe) < 8:
+        return "Le mot de passe est trop court. Minimum 8 caractères."
+    
+    # Vérification de la présence d'une majuscule
+    if not re.search(r'[A-Z]', mot_de_passe):
+        return "Le mot de passe doit contenir au moins une majuscule."
+    
+    # Vérification de la présence d'une minuscule
+    if not re.search(r'[a-z]', mot_de_passe):
+        return "Le mot de passe doit contenir au moins une minuscule."
+    
+    # Vérification de la présence d'un chiffre
+    if not re.search(r'[0-9]', mot_de_passe):
+        return "Le mot de passe doit contenir au moins un chiffre."
+    
+    # Vérification de la présence d'un caractère spécial
+    if not re.search(r'[@$!%*?&]', mot_de_passe):
+        return "Le mot de passe doit contenir au moins un caractère spécial (@, $, !, %, *, ?, &)."
+    
+    # Si toutes les conditions sont remplies, le mot de passe est considéré comme "fort"
+    return "fort"  
+
+
+def generer_mot_de_passe(longueur=12):
+    """Génère un mot de passe sécurisé.
+
+    Cette fonction génère un mot de passe aléatoire composé de lettres, chiffres et caractères spéciaux.
+    
+    Args:
+    longueur (int): La longueur du mot de passe souhaitée.
+
+    Returns:
+    str: Le mot de passe généré.
+    """
+    # Définir l'ensemble de caractères possibles (lettres, chiffres et caractères spéciaux)
+    caracteres = string.ascii_letters + string.digits + "@$!%*?&"
+    
+    # Générer un mot de passe aléatoire
+    mot_de_passe = ''.join(random.choice(caracteres) for i in range(longueur))
+    
+    return mot_de_passe
+
+
+def verifier_mot_de_passe_compromis(mot_de_passe):
+    """Vérifie si un mot de passe a été compromis via l'API 'Have I Been Pwned'.
+    
+    Cette fonction envoie le mot de passe à l'API Have I Been Pwned pour vérifier s'il a été
+    exposé lors d'une fuite de données.
+    
+    Args:
+    mot_de_passe (str): Le mot de passe à vérifier.
+
+    Returns:
+    str: Un message indiquant si le mot de passe a été compromis ou est sécurisé.
+    """
+    # Hash du mot de passe avec SHA1 (utilisé par l'API Have I Been Pwned)
+    mot_de_passe_hash = hashlib.sha1(mot_de_passe.encode('utf-8')).hexdigest().upper()
+    
+    # On ne garde que les 5 premiers caractères pour interroger l'API
+    prefix = mot_de_passe_hash[:5]
+    suffix = mot_de_passe_hash[5:]
+    
+    # URL pour interroger l'API
+    url = f'https://api.pwnedpasswords.com/range/{prefix}'
+    
+    try:
+        # Effectuer la requête HTTP
+        with urllib.request.urlopen(url) as response:
+            # Lire et décoder la réponse de l'API
+            data = response.read().decode('utf-8')
+            
+            # Si le suffixe du hash est dans la réponse, cela signifie que le mot de passe a été compromis
+            if suffix in data:
+                return "Le mot de passe a été compromis !"
+            else:
+                return "Le mot de passe est sécurisé."
+    
+    # Gestion des erreurs de connexion
+    except urllib.error.URLError as e:
+        return f"Erreur de connexion à l'API : {e}"
+
+
+# Demander à l'utilisateur de choisir un mot de passe
+while True:
+    mot_de_passe = input("Entrez un mot de passe pour validation : ")
+    # Vérifier si le mot de passe est assez fort
+    resultat = verifier_mot_de_passe(mot_de_passe)
+    
+    # Si le mot de passe est validé comme fort, on vérifie s'il a été compromis
+    if resultat == "fort":
+        print("✅ Le mot de passe est fort !")
+        
+        # Vérification via l'API "Have I Been Pwned"
+        resultat_compromis = verifier_mot_de_passe_compromis(mot_de_passe)
+        print(resultat_compromis)
+        
+        # Sortir de la boucle si le mot de passe est validé
+        break
+    else:
+        print(f"❌ {resultat} Veuillez réessayer.\n")
+
+# Si l'utilisateur souhaite un mot de passe généré automatiquement
+longueur = int(input("Souhaitez-vous générer un mot de passe sécurisé ? Entrez la longueur souhaitée (par défaut 12) : ") or 12)
+mot_de_passe_suggestion = generer_mot_de_passe(longueur)
+print(f"Voici un mot de passe fort généré : {mot_de_passe_suggestion}")
+
+</code>
+</pre>
+      
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Johanna Angloma. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+
+
