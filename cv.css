@@ -1,26 +1,136 @@
-.cv {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-}
-
-.cv-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.cv-section h2 {
-    margin-top: 0;
-}
-
-.cv-section ul {
-    list-style-type: none;
+/* Réinitialisation des marges et bordures */
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.cv-section ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
+/* Corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaf2ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background-color: #8ba7e3;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #6f91c3;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #4b5d88;
+}
+
+/* Section principale */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    color: #4b5d88;
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Section CV */
+#cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.cv-container {
+    max-width: 80%;
+    text-align: center;
+}
+
+.cv-container img {
+    width: 100%;
+    max-width: 600px; /* Taille maximale de l'image */
+    height: auto; /* Respecte le ratio de l'image */
+    border: 2px solid #4b5d88;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.cv-container img:hover {
+    transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+
+/* Pied de page */
+footer {
+    background-color: #8ba7e3;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .logo-container {
+        flex-direction: column;
+    }
+
+    .cv-container {
+        padding: 1rem;
+    }
+
+    .cv-container img {
+        max-width: 100%;
+    }
 }
