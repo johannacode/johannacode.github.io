@@ -253,6 +253,27 @@ footer {
    /* margin-top: 2rem;
 }
 
+/* Conteneur du CV */
+.cv-container {
+    text-align: center; /* Centre l'image horizontalement */
+    padding: 2rem 0;
+}
+
+/* Image du CV */
+.cv-container .cv {
+    max-width: 90%; /* L'image s'adapte à la largeur de l'écran */
+    height: auto; /* Conserve le ratio de l'image */
+    border: 2px solid #6f91c3; /* Optionnel : bordure pour l'esthétique */
+    border-radius: 5px; /* Arrondi optionnel */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    transition: transform 0.3s ease; /* Effet au survol */
+    cursor: pointer; /* Indique que l'image est cliquable */
+}
+
+.cv-container .cv:hover {
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
 
 /* Effets généraux */
 button, a {
