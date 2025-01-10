@@ -178,7 +178,7 @@ footer {
     padding: 1rem;
 }
 
-footer .footer-links {
+footer .footer-liens {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -223,3 +223,4 @@ footer .footer-liens a:hover {
         margin-bottom: 15px;
     }
 }
+
