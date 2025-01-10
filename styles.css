@@ -143,6 +143,17 @@ nav ul li a:hover {
     font-size: 1rem;
 }
 
+.project-link {
+    text-decoration: none; /* Supprime le soulignement du lien */
+    color: inherit; /* Garde la couleur du texte héritée */
+    display: block; /* Assure que tout le div est cliquable */
+}
+
+.project-link:hover .project-card {
+    transform: scale(1.05); /* Maintient l'effet de survol existant */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Section Contact */
 #contact {
     background-color: #eef2f5;
