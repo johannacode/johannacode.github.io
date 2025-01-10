@@ -4,55 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio - Johanna Angloma</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Police Google -->
+    <link rel="icon" href="https://github.com/johannacode/johannacode.github.io/blob/main/images/LOGOSITE.jpg?raw=true"> <!-- Ajout de l'icône -->
 </head>
 
 <body>
     <header>
+      
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://github.com/johannacode/johannacode.github.io/blob/main/images/LOGOSITE.jpg?raw=true" alt="Logo Johanna Angloma">
+                <h1>Johanna Angloma</h1>
+            </div>
+        </div>
+      
         <nav>
             <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#cv.html">CV</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+      
     </header>
 
     <main>
-        <!-- Section d'accueil -->
+      
+        <!-- Section présentation -->
         <section id="accueil" class="presentation">
-            <div class="description">
-                <h1>Bienvenue sur mon Portfolio !</h1>
-                <p>Je suis Johanna, une passionnée de cybersécurité et de développement web. Découvrez mes projets et mon parcours.</p>
-            </div>
             <img src="https://github.com/johannacode/johannacode.github.io/blob/main/pplinkedin.jpeg?raw=true" alt="Photo de Johanna" class="profile-photo">
+            <div class="description">
+                <h2>Bienvenue sur mon Portfolio !</h2>
+                <p>Dynamique, curieuse et motivée, je suis à la recherche d'une alternance dans le cadre de mes études. J'ai a coeur acquérir une réelle expérience dans le domaine informatique. Mon école propose un rythme de 3 semaines / 1 semaine.</p>
+            </div>
         </section>
-
-        <!-- Section des projets -->
-        <section id="projets" class="projets">
+      
+        <!-- Section Projets -->
+        <section id="projets">
             <h2>Mes Projets</h2>
             <div class="project-container">
                 <div class="project-card">
-                    <img src="https://github.com/johannacode/johannacode.github.io/blob/main/images/visucodemdpsecu.png" alt="Projet 1">
-                    <h3>Mot de passe sécurisé</h3>
-                    <p>Un programme Python générant des mots de passe robustes.</p>
+                    <h3>Code Python :</h3>
+                    <p>Code permettant de généré des mots de passes sécurisé</p>
                 </div>
                 <div class="project-card">
-                    <img src="projet2.jpg" alt="Projet 2">
-                    <h3>Nom du projet 2</h3>
-                    <p>Description du projet 2 en quelques mots.</p>
+                    <h3>Projet Robotique:</h3>
+                    <p>Création d'un robot capable de suivre une ligne, de détecter les obstacles et de viser une cible.</p>
                 </div>
             </div>
         </section>
-
+      
         <!-- Section Contact -->
         <section id="contact">
             <h2>Contactez-moi</h2>
             <p>Envoyez-moi un email : <a href="mailto:johanna_angloma@outlook.fr">johanna_angloma@outlook.fr</a></p>
         </section>
+      
     </main>
 
     <footer>
