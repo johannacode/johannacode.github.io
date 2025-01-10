@@ -19,9 +19,6 @@ header {
     color: white;
     padding: 1rem 2rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #6f91c3, #8ba7e3);
-
 }
 
 .logo-container {
