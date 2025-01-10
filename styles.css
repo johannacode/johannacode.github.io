@@ -7,121 +7,153 @@
 
 /* Mise en page du corps de la page */
 body {
-    font-family: 'Roboto', Arial, sans-serif; /* Police plus moderne */
-    background-color: #eef2f5;
+    font-family: 'Lato', sans-serif;
+    background-color: #eaf2ff;
     color: #333;
     line-height: 1.6;
 }
 
-/* Style de l'en-tête et navigation */
+/* Logo, titre et bande de navigation */
 header {
-    background-color: #3567d3; /* Bleu principal ajusté */
+    background-color: #8ba7e3; 
     color: white;
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem 0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    background-color: #6f91c3; 
+    padding: 1rem;
+    margin-top: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.1rem;
-    padding: 8px 12px;
+    font-size: 1.2rem;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #4f74c2;
-    transform: scale(1.1);
+    background-color: #4b5d88; 
 }
+ 
 
-/* Style de l'introduction */
-#accueil {
-    background: linear-gradient(135deg, #3567d3, #8aa6e1);
-    color: white;
-    text-align: center;
+/* Section présentation */
+.presentation {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9; 
+    gap: 2rem;
     padding: 4rem 2rem;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
 }
 
-#accueil .profile-photo {
-    width: 180px;
-    height: 180px;
+
+/* Modifie la taille de la photo de profil */
+.profile-photo {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin-bottom: 1.5rem;
-    border: 4px solid white;
+    object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 4px solid white;
 }
 
-#accueil h1 {
-    font-size: 3.5rem;
+.profile-photo:hover {
+    transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+
+.description {
+    max-width: 500px; 
+}
+
+.description h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
-    font-weight: bold;
+    color: #4b5d88; 
 }
 
-#accueil p {
+.description p {
     font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.8;
+    color: #555; 
 }
 
-/* Style des sections */
-section {
-    padding: 3rem 1.5rem;
-    margin: 2rem 0;
+
+/* Section projets */
+
+#projets {
+    padding: 2rem;
+    text-align: center;
+    background-color: #eaf2ff; 
 }
 
-/* Style des projets */
+
 #projets h2 {
     font-size: 2.5rem;
-    text-align: center;
     margin-bottom: 2rem;
-    color: #3567d3;
+    color: #4b5d88;
 }
 
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
+
+
 .project-card {
-    background-color: #4f74c2;
+    background-color: #8ba7e3; 
     color: white;
     padding: 1.5rem;
-    border-radius: 10px;
+    width: 250px;
+    border-radius: 8px;
     text-align: center;
     transition: transform 0.3s, background-color 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    background-color: #3567d3;
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    transform: translateY(-10px);
+    background-color: #6f91c3; 
 }
 
 .project-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .project-card p {
     font-size: 1rem;
-    line-height: 1.5;
 }
 
 /* Style de la section Contact */
@@ -129,17 +161,17 @@ section {
     background-color: #eef2f5;
     text-align: center;
     padding: 2rem;
-    border-top: 5px solid #3567d3;
+    border-top: 5px solid #8ba7e3;
 }
 
 #contact h2 {
     font-size: 2rem;
-    color: #3567d3;
+    color: #5784e5;
     margin-bottom: 1rem;
 }
 
 #contact a {
-    color: #3567d3;
+    color: #5784e5;
     text-decoration: none;
     font-weight: bold;
 }
@@ -148,10 +180,21 @@ section {
     text-decoration: underline;
 }
 
-/* Style du pied de page */
+/* Pied de page */
 footer {
-    background-color: #4f74c2;
+    background-color: #8ba7e3;
     color: white;
     text-align: center;
     padding: 1rem;
+   /* margin-top: 2rem;
+}
+
+
+/* Effets généraux */
+button, a {
+    cursor: pointer;
+}
+
+a:hover, button:hover {
+    opacity: 0.8;
 }
