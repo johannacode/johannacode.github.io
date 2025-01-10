@@ -116,18 +116,27 @@ nav ul li a:hover {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: stretch; /* Étire les éléments pour qu'ils aient tous la même hauteur */
 }
 
 .project-card {
     background-color: #8ba7e3;
     color: white;
     padding: 1.5rem;
-    width: 250px;
+    width: 250px; /* Garde une largeur fixe */
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s, background-color 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.project-card {
+    min-height: 250px; /* Fixe une hauteur minimale */
+    display: flex; /* Permet d'organiser les enfants */
+    flex-direction: column; /* Aligne le contenu verticalement */
+    justify-content: space-between; /* Assure un espacement cohérent entre le titre, le texte et d'autres éléments */
+}
+
 
 .project-card:hover {
     transform: scale(1.05);
