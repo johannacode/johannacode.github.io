@@ -115,6 +115,10 @@ pre span.def {
     color: #8be9fd; /* Couleur pour les noms de fonctions */
 }
 
+pre span.fontion {
+    color: #f2f498; /* Couleur pour les noms de fonctions */
+}
+
 pre span.variable {
     color: #50fa7b; /* Couleur pour les variables */
 }
