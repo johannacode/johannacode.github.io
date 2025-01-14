@@ -111,7 +111,7 @@ pre span.keyword {
     font-weight: bold;
 }
 
-pre span.function {
+pre span.def {
     color: #8be9fd; /* Couleur pour les noms de fonctions */
 }
 
@@ -119,7 +119,15 @@ pre span.variable {
     color: #50fa7b; /* Couleur pour les variables */
 }
 
+pre span.bibli {
+    color: #40e0d0; 
 
+pre span.com {
+    color: #fc6a01;
+
+pre span.coms {
+    color: #71b884;
+    
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
