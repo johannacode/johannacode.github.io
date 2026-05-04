@@ -1,8 +1,13 @@
-import digitalresumeImg from "../assets/digitalresume.png";
-import portfoliov1Img from "../assets/portfoliov1.png";
-import portfoliov2Img from "../assets/portfoliov2.png";
-import portfolio2018Img from "../assets/portfolio2018.png";
-import biscordImg from "../assets/biscord.png";
+import digitalresumeImg from "../assets/dr.png";
+import portfoliov1Img from "../assets/portfov1.png";
+import portfoliov2Img from "../assets/portfov2.png";
+import portfolio2018Img from "../assets/portfo.png";
+import biscordImg from "../assets/appbiscord.png";
+import CheckYourNetworkImg from "../assets/check.png";
+import PortfolioActualImg from "../assets/portfolio.png";
+import SmileyQuestImg from "../assets/SmileyQuest.png";
+import PenduImg from "../assets/pendu.png";
+import RobotImg from "../assets/robot.png";
 
 export const personalInfo = {
   name: "Johanna Angloma",
@@ -47,6 +52,7 @@ export const projects = [
       Objectif : créer un outil simple, visuel et pédagogique pour comprendre la qualité d’une connexion internet en temps réel.`,
     tags: ["Flask", "Python", "JavaScript", "SVG", "CSS", "Web API"],
     category: "web",
+    image: CheckYourNetworkImg,
     link: "https://checkyournetwork.onrender.com/"
   },
   {
@@ -67,6 +73,7 @@ export const projects = [
     tags: ["React", "CSS", "JavaScript"],
     category: "web",
     inProgress: true,
+    image: PortfolioActualImg,
     link: null,
   },
   {
@@ -106,6 +113,7 @@ export const projects = [
       Objectif : créer un jeu complet et fun en Java tout en découvrant de nouveaux outils et pratiques de développement.`,
     tags: ["Java", "IntelliJ", "Tiled", "Game Dev"],
     category: "jeux",
+    image: SmileyQuestImg,
     link: null,
   },
   {
@@ -126,6 +134,7 @@ export const projects = [
     tags: ["Arduino", "Python", "C++", "Électronique"],
     category: "IoT",
     highlight: "3ème au concours",
+    image: RobotImg,
     link: null,
   },
   {
@@ -189,6 +198,7 @@ export const projects = [
       Le projet peut être exporté en exécutable Windows/Linux et constitue une base solide pour étendre le jeu avec de nouvelles fonctionnalités ou améliorations visuelles.`,
     tags: ["Python", "Pygame", "Game Dev", "UI", "Input Handling"],
     category: "jeux",
+    image: PenduImg,
     link: null,
   },
   {
