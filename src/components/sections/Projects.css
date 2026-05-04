@@ -308,6 +308,7 @@ body:not(.dark) .carousel__dot {
 
 @media (min-width: 1200px) {
   .pcard { flex: 0 0 calc(25% - 0.94rem); }
+  .carousel__dots { display: none; }
 }
 
 @media (max-width: 768px) {
