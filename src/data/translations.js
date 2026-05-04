@@ -12,6 +12,15 @@ export const translations = {
       seeProjects: "Voir mes projets",
       myCV: "Mon CV",
       school: "EPITECH · 3ème année (Prépa)",
+      availability: "Disponible pour une alternance",
+      bio: "Curieuse et déterminée, je transforme mes projets perso en terrains d'expérimentation. Passionnée par la cybersécurité, j'explore, j'apprends et je crée pour rejoindre un monde où la technique rime avec imagination.",
+      taglineAccent: "MSc Cybersécurité",
+      roles: [
+        "<Développeuse Web />",
+        "<Future Ingénieure en Cybersécurité />",
+        "<Étudiante EPITECH />",
+        "<Passionnée de code />",
+      ],
     },
     projects: {
       title: "Mes Projets",
@@ -59,9 +68,9 @@ export const translations = {
       bio1Part3: "et bientôt en",
       level: "MSc Cybersécurité",
       bio1Part4: "Mon objectif : devenir ingénieure dans un domaine qui m'a toujours fascinée par ses enjeux techniques et humains.",
-      
+
       bio2: "J'ai commencé à coder par curiosité, et cette curiosité ne s'est jamais éteinte. Chaque projet du robot Arduino qui m'a valu une 3ème place en concours à ce portfolio entièrement repensé en React m'a appris quelque chose de nouveau.",
-      
+
       bio3Part1: "Je cherche une",
       work: "alternance en informatique",
       bio3Part2: "pour mettre mes compétences au service d'une équipe, progresser vite, et construire des choses qui comptent.",
@@ -71,6 +80,14 @@ export const translations = {
 
       native: "Langue maternelle",
       pro: "Niveau professionnel",
+
+
+      skillCats: {
+        Langages: "Languages",
+        "Front-end": "Front-end",
+        "Outils & Systèmes": "Tools & Systems",
+        "Bases de données": "Databases",
+      }
     },
     contact: {
       title: "Contacte-moi",
@@ -85,7 +102,7 @@ export const translations = {
       oemum: "ou envoyer moi un message",
       nm: "Nouveau message",
       available: "Disponible pour une alternance dès maintenant",
-      placeordermessage : "Bonjour Johanna, j'ai une opportunité qui pourrait t'intéresser...", 
+      placeordermessage: "Bonjour Johanna, j'ai une opportunité qui pourrait t'intéresser...",
     },
   },
   en: {
@@ -101,6 +118,15 @@ export const translations = {
       seeProjects: "See my projects",
       myCV: "My CV",
       school: "EPITECH · 3rd year",
+      availability: "Available for an apprenticeship",
+      bio: "Curious and determined, I turn my personal projects into experimental playgrounds. Passionate about cybersecurity, I explore, learn, and create to join a world where technology rhymes with imagination.",
+      taglineAccent: "MSc in Cybersecurity",
+      roles: [
+        "<Web Developer />",
+        "<Future Cybersecurity Engineer />",
+        "<EPITECH Student />",
+        "<Code Enthusiast />",
+      ],
     },
     projects: {
       title: "My Projects",
@@ -160,6 +186,13 @@ export const translations = {
 
       native: "Native language",
       pro: "Professional level",
+
+      skillCats: {
+        Langages: "Languages",
+        "Front-end": "Front-end",
+        "Outils & Systèmes": "Tools & Systems",
+        "Bases de données": "Databases",
+      },
     },
     contact: {
       title: "Contact me",
@@ -174,7 +207,7 @@ export const translations = {
       oemum: "or send me a message",
       nm: "New message",
       available: "Available for an apprenticeship now",
-      placeordermessage : "Hello Johanna, I have an opportunity that might interest you...",
+      placeordermessage: "Hello Johanna, I have an opportunity that might interest you...",
     },
   },
 };

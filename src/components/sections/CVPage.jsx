@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { personalInfo, cvFormation, cvExperiences, cvSkills } from "../../data/portfolio";
+import { personalInfo, cvFormationByLang, cvExperiencesByLang, cvSkills } from "../../data/portfolio";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./CVPage.css";
 import { FaDownload, FaFireAlt, FaShieldAlt, FaUsers, FaBrain } from "react-icons/fa";
@@ -12,7 +12,9 @@ const SKILL_CATS = Object.keys(cvSkills);
 const SKILL_WORDS = ["React", "Python", "Linux", "Docker", "JavaScript", "Rust", "Git", "Jenkins", "NexJS"];
 
 export default function CVPage() {
-  const { t } = useLang(); 
+  const { t, lang } = useLang();
+  const cvFormation = cvFormationByLang[lang];
+  const cvExperiences = cvExperiencesByLang[lang];
   const { ref, isVisible } = useScrollReveal();
   const [activeCat, setActiveCat] = useState(SKILL_CATS[0]);
 
@@ -172,9 +174,11 @@ export default function CVPage() {
                   className={`cvpage__skill-tab${activeCat === cat ? " active" : ""}`}
                   onClick={() => setActiveCat(cat)}
                 >
-                  {cat}
+                  {lang === "en" ? t.cv.skillCats[cat] : cat}
                 </button>
               ))}
+
+              
             </div>
 
             <div className="cvpage__skill-grid">
@@ -214,7 +218,7 @@ export default function CVPage() {
           </div>
 
         </div>
-        
+
       </div>
     </section>
   );

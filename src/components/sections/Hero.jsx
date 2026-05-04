@@ -39,8 +39,8 @@ function useTypewriter(words, speed = 80, pause = 1800) {
 }
 
 export default function Hero() {
-  const typed = useTypewriter(personalInfo.roles, 75, 2000);
   const { lang, t, toggleLang } = useLang();
+  const typed = useTypewriter(t.hero.roles, 75, 2000);
   const scrollTo = (id) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
@@ -53,7 +53,7 @@ export default function Hero() {
       <div className="container hero__inner">
         <div className="hero__badge">
           <span className="hero__badge-dot" />
-          {personalInfo.availability}
+          {t.hero.availability}
         </div>
 
         <h1 className="hero__name">
@@ -67,10 +67,10 @@ export default function Hero() {
         </div>
 
         <p className="hero__tagline">
-          {t.hero.tagline} <strong>{personalInfo.tagline}</strong>
+          {t.hero.tagline} <strong>{t.hero.taglineAccent}</strong>
         </p>
 
-        <p className="hero__bio">{personalInfo.bio}</p>
+        <p className="hero__bio">{t.hero.bio}</p>
 
         <div className="hero__pills">
           <span className="hero__pill">
