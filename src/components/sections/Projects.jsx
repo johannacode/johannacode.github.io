@@ -7,7 +7,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { useLang } from "../../context/LangContext";
 
 function ProjectCard({ project, accent, onClick, isDragging }) {
-  
+
   const { t } = useLang();
 
   return (
@@ -37,10 +37,16 @@ function ProjectCard({ project, accent, onClick, isDragging }) {
         <p className="pcard__desc">{project.description}</p>
 
         <div className="pcard__tags">
-          {project.tags.map(t => (
-            <span key={t} className="pcard__tag">{t}</span>
+          {project.tags.slice(0, 4).map(tag => (
+            <span key={tag} className="pcard__tag">{tag}</span>
           ))}
+          {project.tags.length > 4 && (
+            <span className="pcard__tag pcard__tag--more">
+              +{project.tags.length - 4}
+            </span>
+          )}
         </div>
+
 
         <span className="pcard__cta">
           {t.projects.learnMore}
@@ -64,15 +70,13 @@ export default function Projects() {
     ...PROJECT_CATEGORIES
   ];
   const onScroll = () => {
-    if (!trackRef.current) return;
-
-    const scrollLeft = trackRef.current.scrollLeft;
-    const cardWidth = trackRef.current.children[0]?.offsetWidth || 1;
-    const gap = 16;
-
-    const index = Math.round(scrollLeft / (cardWidth + gap));
-    setCurrent(index);
+    const track = trackRef.current;
+    if (!track || !track.children[0]) return;
+    const cardWidth = track.children[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(track).gap) || 16;
+    setCurrent(Math.round(track.scrollLeft / (cardWidth + gap)));
   };
+
 
 
   const { ref, isVisible } = useScrollReveal();

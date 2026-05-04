@@ -41,8 +41,8 @@ export default function ProjectModal({ project, accent, onClose }) {
           <p className="modal__desc">{project.longDescription}</p>
 
           <div className="modal__tags">
-            {project.tags.map(t => (
-              <span key={t} className="pcard__tag">{t}</span>
+            {project.tags.map(tag => (
+              <span key={tag} className="pcard__tag">{tag}</span>
             ))}
           </div>
 
