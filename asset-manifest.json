@@ -1,19 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.9151479b.css",
-    "main.js": "/static/js/main.f040fb3c.js",
+    "main.js": "/static/js/main.ffb1f54a.js",
     "static/media/floating-head.gif": "/static/media/floating-head.9797b83e4ea160c2ada1.gif",
-    "static/media/portfoliov2.png": "/static/media/portfoliov2.1d54f962a2d72118bbc3.png",
-    "static/media/portfolio2018.png": "/static/media/portfolio2018.661535451054167a053f.png",
-    "static/media/portfoliov1.png": "/static/media/portfoliov1.914c1422bb9abf1b1f0e.png",
-    "static/media/digitalresume.png": "/static/media/digitalresume.99c9ccdc0062e21df888.png",
-    "static/media/biscord.png": "/static/media/biscord.65e745080da9c1fe5f8e.png",
+    "static/media/robot.png": "/static/media/robot.8033412a9030e030520b.png",
+    "static/media/SmileyQuest.png": "/static/media/SmileyQuest.dd13b51d9221cb15a0ac.png",
+    "static/media/pendu.png": "/static/media/pendu.fb9630e51dbd4caad8ac.png",
+    "static/media/portfov1.png": "/static/media/portfov1.2cfcdd981826e27f69ac.png",
+    "static/media/appbiscord.png": "/static/media/appbiscord.1d6700f83619c71df330.png",
+    "static/media/portfolio.png": "/static/media/portfolio.664e60e45e129ba51fbe.png",
+    "static/media/portfo.png": "/static/media/portfo.9ef9039f1950ad963003.png",
+    "static/media/portfov2.png": "/static/media/portfov2.c9240416f4e6e5f876de.png",
+    "static/media/check.png": "/static/media/check.b6f33b12d0b845e7bf75.png",
+    "static/media/dr.png": "/static/media/dr.a97432c1f40f5773b597.png",
     "index.html": "/index.html",
     "main.9151479b.css.map": "/static/css/main.9151479b.css.map",
-    "main.f040fb3c.js.map": "/static/js/main.f040fb3c.js.map"
+    "main.ffb1f54a.js.map": "/static/js/main.ffb1f54a.js.map"
   },
   "entrypoints": [
     "static/css/main.9151479b.css",
-    "static/js/main.f040fb3c.js"
+    "static/js/main.ffb1f54a.js"
   ]
 }
