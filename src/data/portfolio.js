@@ -13,7 +13,7 @@ export const personalInfo = {
     "<Étudiante EPITECH />",
     "<Passionnée de code />",
   ],
-  tagline: "Bientôt en Mastère MSc Cybersécurité",
+  tagline: "MSc Cybersécurité",
   bio: "Curieuse et déterminée, je transforme mes projets perso en terrains d'expérimentation. Passionnée par la cybersécurité, j'explore, j'apprends et je crée pour rejoindre un monde où la technique rime avec imagination.",
   location: "Île-de-France",
   email: "johanna_angloma@outlook.fr",
@@ -237,7 +237,7 @@ export const cvFormation = [
   {
     id: 1,
     period: "2026 → 2028",
-    title: "MSc Pro Cybersécurité",
+    title: "MSc Cybersécurité",
     school: "EPITECH | Paris",
     desc: "Formation spécialisée en sécurité des systèmes d'information, incluant pentest, architecture sécurisée et protection des données.",
     tags: ["Cybersécurité", "Développement", "Sécurité"],
@@ -246,7 +246,7 @@ export const cvFormation = [
   {
     id: 2,
     period: "2025 → 2026",
-    title: "Prepa Informatique",
+    title: "Prepa Msc",
     school: "EPITECH | Paris",
     desc: "Formation orientée projets : développement logiciel, systèmes Unix, travail en équipe et conception d'applications complètes.",
     tags: ["Développement", "Unix", "Projets"],
@@ -288,7 +288,7 @@ export const cvExperiences = [
     title: "Assistante numérique pour l'emploi",
     company: "Pôle emploi",
     desc: "Accompagnement des utilisateurs sur les outils numériques, support technique et sensibilisation aux bonnes pratiques de sécurité.",
-    tags: ["Support", "Formation", "Cybersécurité"],
+    tags: ["Support", "Formation"],
     type: "pro",
   },
   {
