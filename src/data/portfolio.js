@@ -27,6 +27,29 @@ export const personalInfo = {
 
 export const projects = [
   {
+    id: 10,
+    title: "CheckYourNetwork",
+    subtitle: "Projet Web",
+    description: "Outil web interactif mesurant la qualité de connexion internet via latence et score dynamique.",
+    longDescription: `CheckYourNetwork est une application web développée avec Flask permettant d’analyser la qualité d’une connexion internet en temps réel.
+
+      Le système teste plusieurs serveurs (Google, GitHub, YouTube, StackOverflow) afin de mesurer la latence réseau et calculer un score global de performance.
+
+      Fonctionnalités principales :
+      - Mesure de latence sur plusieurs sites web
+      - Calcul d’un score de qualité de connexion (0 à 100)
+      - Affichage dynamique avec jauge animée en SVG
+      - Calcul du ping moyen avec classification (Rapide / Moyen / Lent)
+      - Interface moderne avec animations JavaScript et design responsive
+
+      Le projet combine backend Python (Flask), logique réseau (requests), et frontend interactif (HTML, CSS, JS).
+
+      Objectif : créer un outil simple, visuel et pédagogique pour comprendre la qualité d’une connexion internet en temps réel.`,
+    tags: ["Flask", "Python", "JavaScript", "SVG", "CSS", "Web API"],
+    category: "web",
+    link: "https://checkyournetwork.onrender.com/"
+  },
+  {
     id: 6,
     title: "Portfolio actuel",
     subtitle: "Projet Personnel · En cours",
@@ -323,8 +346,8 @@ export const cvSkills = {
 };
 
 export const navLinks = [
-  { label: "Accueil", href: "#hero"    },
+  { label: "Accueil", href: "#hero" },
   { label: "Projets", href: "#projets" },
-  { label: "CV",      href: "#cv"      },
+  { label: "CV", href: "#cv" },
   { label: "Contact", href: "#contact" },
 ];
