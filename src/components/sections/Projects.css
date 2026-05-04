@@ -16,7 +16,6 @@
   flex-wrap: wrap;
 }
 
-/* Onglets */
 .projects__tabs {
   display: flex;
   gap: 0.45rem;
@@ -101,13 +100,11 @@
   transition: width 0.3s ease, background 0.3s ease;
 }
 
-/* Message vide */
 .carousel__empty {
   text-align: center; padding: 3rem;
   color: var(--color-text-muted); font-size: 0.9rem;
 }
 
-/* CARTE PROJET  */
 .pcard {
   flex: 0 0 100%;
   min-width: 0;
@@ -116,7 +113,7 @@
   border-radius: 18px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;   /* ← vertical : visuel haut / body bas */
+  flex-direction: column;   
   cursor: pointer;
   position: relative;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
@@ -135,7 +132,6 @@
   box-shadow: 0 10px 36px rgba(212,165,165,0.1);
 }
 
-/* Visuel projet */
 .pcard__visual {
   position: relative;
   height: 190px;
@@ -152,7 +148,6 @@
   pointer-events: none;
 }
 
-/* Badges */
 .pcard__badge {
   position: absolute; top: 0.75rem;
   font-size: 0.67rem; font-weight: 600; font-family: var(--font-mono);
@@ -168,7 +163,6 @@
   color: var(--color-beige-light);
 }
 
-/* Infos projets */
 .pcard__body {
   padding: 1.5rem;
   display: flex; flex-direction: column; gap: 0.45rem;
