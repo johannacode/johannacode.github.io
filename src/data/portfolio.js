@@ -199,7 +199,7 @@ export const projects = [
     tags: ["Python", "Pygame", "Game Dev", "UI", "Input Handling"],
     category: "jeux",
     image: PenduImg,
-    link: null,
+    link: "https://johannacode.itch.io/hangman-game",
   },
   {
     id: 5,
